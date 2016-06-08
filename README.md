@@ -3,6 +3,7 @@
 
 ### Dom level
 1. 正则表达式+new Function()
+
 > template-demo.html为string层面处理的模板引擎，支持JS表达式和函数表达式
 ```html
     <div id="temp">
