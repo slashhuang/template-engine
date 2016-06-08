@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板引擎展示</title>
+</head>
+<body>
+<div id="temp">
+    <div>这是一个普通的html:<p>it is an  html</p></div>
+    <div>这是一段JS三目运算符结果:<%=boolean?'true':'false'%></div>
+    <div>
+        这是数据对象中的方法操作结果:<p><%joinData()%></p>
+    </div>
+    <div>
+        数组中第二个数字为
+        <p><%data[1]%></p>
+    </div>
+</div>
+<!--引入自定义模板引擎-->
+<script src="js/template.js"></script>
+<script>
+    var data = {
+        'boolean':true,
+        'data':[
+            'a',
+            'b',
+            'c'
+        ],
+        joinData:function(){
+            return this.data.join('')
+        }
+    };
+    var targetNode = document.getElementById('temp');
+    template(targetNode,data);
+</script>
+</body>
+</html>
