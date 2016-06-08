@@ -2,9 +2,9 @@
 > 实践DOM层面和V-DOM层面模板引擎
 
 ### Dom level
-1. 正则表达式+new Function()
+1. 正则表达式+new Function()【启发自underscore的template操作】
 
-> template-demo.html为string层面处理的模板引擎，支持JS表达式和函数表达式
+> template-demo.html为string层面处理的模板引擎，支持JS表达式和函数表达式。
 ```html
     <div id="temp">
         <div>这是一个普通的html:<p>it is an  html</p></div>

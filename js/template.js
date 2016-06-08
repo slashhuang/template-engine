@@ -49,10 +49,12 @@ var template=function(DOMNode,data){
         }
         index= offset+match.length;
     });
+    /**
+     * 生成函数字符串表达式
+     * @type {string}
+     */
     var finalStr= 'var _VAR="";\n'+'with(obj||{}){\n' +source+ '}\n'+ 'return _VAR;\n';
-    console.log(finalStr)
     var render = new Function('obj',finalStr);
-    debugger;
     DOMNode.innerHTML=render(data)
 };
 
